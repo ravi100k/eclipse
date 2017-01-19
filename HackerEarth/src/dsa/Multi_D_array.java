@@ -2,29 +2,42 @@ package dsa;
 
 import java.util.Scanner;
 
-public class Multi_D_array {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc= new Scanner(System.in);
-		int row;
-		int coll;
-		
-		row = sc.nextInt();
-		coll = sc.nextInt();
-		int[][] Array = new int[row][coll];
-
-
-		for (row= 0; row < Array.length; row++) {
-			for(coll = 0; coll < Array[row].length; coll++) {
-			    //System.out.println(i+j);
-			    Array[row][coll] = sc.nextInt(); //Storing input value here    
-			    System.out.println((Array[row][coll]));//Output the input value
-			}
-			System.out.println();
-		}
-		
-
-	}
-
+class Multi_D_array
+{
+   public static void main(String args[])
+   {
+      int m, n, c, d;
+ 
+      Scanner in = new Scanner(System.in);
+      System.out.println("Enter the number of rows and columns of matrix");
+      m = in.nextInt();
+      n = in.nextInt();
+ 
+      int matrix[][] = new int[m][n];
+ 
+      System.out.println("Enter the elements of matrix");
+ 
+      for ( c = 0 ; c < m ; c++ )
+         for ( d = 0 ; d < n ; d++ )
+            matrix[c][d] = in.nextInt();
+ 
+      int transpose[][] = new int[n][m];
+ 
+      for ( c = 0 ; c < m ; c++ )
+      {
+         for ( d = 0 ; d < n ; d++ )               
+            transpose[d][c] = matrix[c][d];
+      }
+ 
+      System.out.println("Transpose of entered matrix:-");
+ 
+      for ( c = 0 ; c < n ; c++ )
+      {
+         for ( d = 0 ; d < m ; d++ )
+               System.out.print(matrix[c][d]+"\t");
+ 
+         System.out.print("\n");
+      }
+   }
 }
