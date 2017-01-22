@@ -1,12 +1,11 @@
 package LinkedIn;
 
  import java.util.*;
- import java.io.*;
 
  class dictionariesAndMaps{
      Map<String,Integer> contacts;
      dictionariesAndMaps(){
-         contacts =new HashMap<>();
+         contacts =new HashMap<String, Integer>();
      }
      private void addContact(String  name, int number){
          if(contacts != null && !contacts.containsKey(name)){
